@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>김지혜</title>
+    <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <style>
+
+       /*  선택자
+        {속성명: 속성값;} */
+        /* reset */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        ul {
+            list-style: none;
+        }
+        h2 {
+            text-align: center;
+            padding-top: 72px;
+            padding-bottom: 35px;
+            
+        }
+        /* class를 지칭하는 선택자는 점. */
+        .line {
+            display: block;
+            width: 100px;
+            height: 2px;
+            background-color: violet;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 20px;
+        }
+            /* 라인은 텍스트에 포함되지 않으므로 마진으로 위치를 조절해야함
+ */
+
+        /* 헤더에 관한 css작성 */
+        header {
+            background-image: url(image/main_bg.png);
+            padding: 15px;
+            text-align: center; /* 헤더안의 이미지가 텍스트로 취급되어 종속됨 */
+           
+        }
+        header img  {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%; /* 50%대신 75px(타원일 경우 사용)이라고 적어도 됨 */
+        }
+        /* 섹션 */
+        section p {
+            font-size: 14px;
+            text-align: center;
+            color: #222222;
+            /* 숫자 두개씩 묶어 각각 R G B 를 나타냄 */
+            margin-bottom: 40px;
+        }
+        table{
+            width: 960px;
+            margin-left: auto;
+            margin-right: auto;
+            border-top: 1px solid #333333;
+            /* 1픽셀의 실선으로 어떤 색으로 하겠다. */
+            border-collapse: collapse;
+            /* 서로 떨어진 줄 이어붙이기 */
+        }
+        td {
+            border-bottom: 1px solid #333333;
+            padding: 9px;
+            /* 내부간격 - 패딩, 외부간격 - 마진 */
+        }
+        .picture {
+            width: 400px;
+        }
+
+        td i {vertical-align: middle;
+        margin: 0 30px;} 
+        /* 수직정렬할 때 사용 */
+        #sns {
+            height: 400px;
+            background-color: #f1f1f1;
+            margin-top: 120px;
+        }
+        #sns ul {
+            width: 960px;
+            margin: 0 auto 0 auto; /* 상 우 하 좌 (위부터 시계방향) */
+           /*  margin: 0 auto 0;  값이 3개일때, 상 좌우 하 
+            margin: 0 auto;  값이 2개일때,상하 좌우 */
+            /* 아래로 내려올수록 우선순위가 높아지므로 같은 선택자가 있을 경우 맨 아래에 있는 것만 적용 */
+                 }
+        #sns ul li {
+            width: 25%;
+            float: left;
+            text-align: center;
+        }
+        footer {
+            background-color: #222;
+            padding: 25px 0;
+            color: white;
+            text-align: center;
+        }
+        span table {text-align: center;}
+        /* id의 선택자는 샵 */
+    </style>
+</head>
+<body>
+    <header>
+        <h1>
+            <img src="image/main_bg.png" alt="">
+        </h1>
+    </header>
+    <section>
+        <h2>
+            KIM JI-HYE
+        </h2>
+        <span class="line"></span>
+        <p>알아서 깔끔하게 잘 만들어드립니다.</p>
+        <table>
+            <tr>
+                <td rowspan="4" class="picture">
+                    <img src="http://via.placeholder.com/300" alt="">
+                    <!--  더미 이미지 사이트 -->
+                </td>
+                <td>Name : 김지혜</td>
+            </tr>
+            <tr>
+                
+                <td>Birth : 93.02.28</td>
+            </tr>
+            <tr>
+               
+                <td>Phone : 000.0000.0000</td>
+            </tr>
+            <tr>
+                
+                <td>E-mail : gggsy0123@gmail.com</td>
+            </tr>
+        </table>
+        <h2>
+            EDUCATION
+        </h2>
+        <span>
+        <table>
+            <tr>
+                <td>2012.03 대학교 입학</td>
+            </tr>
+            <tr>
+                <td>2016.02 대학교 졸업</td>
+            </tr>
+            <tr>
+                <td>2017.03 취직</td>
+            </tr>
+        </table>
+        <h2>SKILL</h2>
+        <table>
+            <tr>
+                <td><i class="xi-html5 xi-5x"></i>HTML5</td>
+                <td><i class="xi-css3 xi-5x"></i>CSS3</td>
+                <td><i class="xi-javascript xi-5x"></i>javaScript</td>
+            </tr>
+        </table>
+    </span>
+    </section>
+
+    <section id="sns">
+        <h2>
+            저는 주로 여기에 있어요
+        </h2>
+        <span class="line"></span>
+        <p>제 일상을 보고싶으시면 아래 링크를 클릭하세요.</p>
+        <ul>
+            <li><i class="xi-instagram xi-5x"></i><br>instagram</li>
+            <li><i class="xi-facebook xi-5x"></i><br>facebook</li>
+            <li ><i class="xi-blogger xi-5x"></i><br>blog</li>
+            <li><i class="xi-twitter xi-5x"></i><br>twitter</li>
+        </ul>
+    </section>
+    <footer>
+        thank you
+    </footer>
+</body>
+</html>
